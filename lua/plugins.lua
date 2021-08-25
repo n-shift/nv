@@ -67,6 +67,12 @@ packer.startup({function()
         'glepnir/dashboard-nvim',
         config = function() require("config.dashboard") end
     }
+
+    use {
+        'kyazdani42/nvim-tree.lua',
+        config = function() require("config.nvimtree") end,
+        requires = 'kyazdani42/nvim-web-devicons',
+    }
     
     -- GIT
 
