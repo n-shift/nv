@@ -57,12 +57,9 @@ local v_gitsigns = {
     { "r", "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
 }
 
-local lazygit = { "z", "<cmd>LazyGit<cr>" }
-
 nest.applyKeymaps(escapes)
 nest.applyKeymaps(packer)
 nest.applyKeymaps(leader)
 nest.applyKeymaps(telescope)
 nest.applyKeymaps(n_gitsigns)
 nest.applyKeymaps(v_gitsigns)
-nest.applyKeymaps(lazygit)

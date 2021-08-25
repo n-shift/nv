@@ -61,9 +61,8 @@ packer.startup({function()
 
     -- git wrapper
     use {
-        'kdheepak/lazygit.nvim',
+        'TimUntersberger/neogit',
         requires = { 'nvim-lua/plenary.nvim' },
-        config = function() require("config.lazygit") end
     }
 
     -- git diff signs
