@@ -62,6 +62,12 @@ packer.startup({function()
         config = function() require("config.telescope") end
     }
     
+    -- dashboard on VimEnter
+    use {
+        'glepnir/dashboard-nvim',
+        config = function() require("config.dashboard") end
+    }
+    
     -- GIT
 
     -- git diff signs
