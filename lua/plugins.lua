@@ -89,6 +89,17 @@ packer.startup({function()
         config = function() require("config.presence") end
     }
 
+    -- COMPLETION
+
+    -- completion engine
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-nvim-lua'
+        }
+    }
+
 end,
 config = config
 })
