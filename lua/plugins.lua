@@ -15,12 +15,14 @@ packer.startup({function()
     -- bunch of colorschemes with treesitter support
     use {
         'Pocco81/Catppuccino.nvim',
+        event = "VimEnter",
         config = function() require("config.colorscheme") end
     }
 
     -- better text highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
+        event = "BufRead",
         config = function() require("config.treesitter") end,
         run = ':TSUpdate'
     }
@@ -29,14 +31,16 @@ packer.startup({function()
 
     -- text formatter
     use {
-        'sbdchd/neoformat'
+        'sbdchd/neoformat',
+        cmd = "Neoformat"
     }
 
     -- TPOPE SECTION
 
     -- quickly deal with pairs of ...
     use {
-        'tpope/vim-surround'
+        'tpope/vim-surround',
+        event = "BufEnter"
     }	
 
     -- UTILS
@@ -54,22 +58,18 @@ packer.startup({function()
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
+        cmd = "Telescope",
         config = function() require("config.telescope") end
     }
     
     -- GIT
 
-    -- git wrapper
-    use {
-        'TimUntersberger/neogit',
-        requires = { 'nvim-lua/plenary.nvim' },
-    }
-
     -- git diff signs
     use {
         'lewis6991/gitsigns.nvim',
         requires = { 'nvim-lua/plenary.nvim' },
-        config = function() require("config.gitsigns") end
+        config = function() require("config.gitsigns") end,
+        cond = function() return vim.fn.isdirectory(".git") == 1 end
     }
 
     -- LOCAL PLUGINS
@@ -85,6 +85,7 @@ packer.startup({function()
     -- manage DRPC
     use {
         'andweeb/presence.nvim',
+        cmd = "RPC",
         config = function() require("config.presence") end
     }
 
@@ -93,10 +94,11 @@ packer.startup({function()
     -- completion engine
     use {
         'hrsh7th/nvim-cmp',
+        event = "InsertEnter",
         requires = {
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-nvim-lua',
-            'hrsh7th/cmp-nvim-lsp',
+            {'hrsh7th/cmp-buffer', after = 'nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp'},
         }
     }
 
@@ -105,6 +107,7 @@ packer.startup({function()
     -- lsp configuration
     use {
         'neovim/nvim-lspconfig',
+        event = "BufRead",
         config = function() require("lsp") end
     }
     
@@ -117,6 +120,7 @@ packer.startup({function()
             "nvim-lua/popup.nvim",
             "mfussenegger/nvim-dap",
         },
+        event = "BufRead,BufNewFile *.rs",
         config = function() require("config.rust") end
     }
 
