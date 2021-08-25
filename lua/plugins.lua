@@ -100,6 +100,25 @@ packer.startup({function()
         }
     }
 
+    -- LSP
+
+    -- lsp configuration
+    use {
+        'neovim/nvim-lspconfig',
+        config = function() require("lsp") end
+    }
+    
+    -- rust lsp defaults
+    use {
+        'simrat39/rust-tools.nvim/',
+        requires = {
+            "neovim/nvim-lspconfig",
+            "nvim-lua/plenary.nvim",
+            "mfussenegger/nvim-dap",
+        },
+        config = function() require("config.rust") end
+    }
+
 end,
 config = config
 })
