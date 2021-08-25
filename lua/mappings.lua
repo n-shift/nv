@@ -57,16 +57,9 @@ local v_gitsigns = {
     { "r", "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
 }
 
-local neogit = {
-    prefix = "<leader>g",
-    { "g", "<cmd>lua require('neogit').open({kind = 'split'})<cr>" },
-    { "c", "<cmd>lua require('neogit').open({'commit'})<cr>" },
-}
-
 nest.applyKeymaps(escapes)
 nest.applyKeymaps(packer)
 nest.applyKeymaps(leader)
 nest.applyKeymaps(telescope)
 nest.applyKeymaps(n_gitsigns)
 nest.applyKeymaps(v_gitsigns)
-nest.applyKeymaps(neogit)
