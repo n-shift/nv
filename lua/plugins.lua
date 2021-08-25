@@ -70,6 +70,7 @@ packer.startup({function()
 
     use {
         'kyazdani42/nvim-tree.lua',
+        cmd = "NvimTreeToggle",
         config = function() require("config.nvimtree") end,
         requires = 'kyazdani42/nvim-web-devicons',
     }
@@ -111,7 +112,8 @@ packer.startup({function()
             {'hrsh7th/cmp-buffer', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp'},
-        }
+        },
+        config = function() require("config.cmp") end
     }
 
     -- LSP
@@ -132,7 +134,7 @@ packer.startup({function()
             "nvim-lua/popup.nvim",
             "mfussenegger/nvim-dap",
         },
-        event = "BufRead,BufNewFile *.rs",
+        ft = {"rust"},
         config = function() require("config.rust") end
     }
 
