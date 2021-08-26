@@ -67,12 +67,19 @@ packer.startup({function()
         'glepnir/dashboard-nvim',
         config = function() require("config.dashboard") end
     }
-
+    
+    -- file manager
     use {
         'kyazdani42/nvim-tree.lua',
         cmd = "NvimTreeToggle",
         config = function() require("config.nvimtree") end,
         requires = 'kyazdani42/nvim-web-devicons',
+    }
+
+    -- uniform icons
+    use {
+        'projekt0n/circles.nvim',
+        config = function() require("config.circles") end
     }
     
     -- GIT
@@ -107,7 +114,7 @@ packer.startup({function()
     -- completion engine
     use {
         'hrsh7th/nvim-cmp',
-        event = "InsertEnter",
+        event = "BufRead",
         requires = {
             {'hrsh7th/cmp-buffer', after = 'nvim-cmp'},
             {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
@@ -121,7 +128,7 @@ packer.startup({function()
     -- lsp configuration
     use {
         'neovim/nvim-lspconfig',
-        event = "BufRead",
+        after = "cmp-nvim-lsp",
         config = function() require("lsp") end
     }
     
@@ -132,10 +139,15 @@ packer.startup({function()
             "neovim/nvim-lspconfig",
             "nvim-lua/plenary.nvim",
             "nvim-lua/popup.nvim",
+            "nvim-telescope/telescope.nvim",
             "mfussenegger/nvim-dap",
         },
-        ft = {"rust"},
-        config = function() require("config.rust") end
+    }
+
+    -- lua lsp defaults
+    use {
+        'folke/lua-dev.nvim',
+        ft = {"lua"}
     }
 
 end,

@@ -4,10 +4,8 @@ if not present then
 end
 
 local escapes = {
-    mode = "i",
-    { "jk", "" },
-    mode = "t",
-    { "jk", "" },
+    { mode = "i", { "jk", "" } },
+    { mode = "t", { "jk", "" } },
 }
 
 local leader = {

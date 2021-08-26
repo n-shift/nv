@@ -18,10 +18,10 @@ catppuccino.setup({
         native_lsp = {
             enabled = true,
             styles = {
-                errors = "italic",
-                hints = "italic",
-                warnings = "italic",
-                information = "italic",
+                errors = "bold",
+                hints = "bold",
+                warnings = "bold",
+                information = "bold",
             },
         },
         lsp_trouble = false,
