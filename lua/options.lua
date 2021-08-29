@@ -10,6 +10,9 @@ vim.opt.cul = true
 -- disable ~ on eob
 vim.opt.fillchars = { eob = " " }
 
+-- set maximum amount of completion items to 10
+vim.opt.ph = 10
+
 -- disable providers
 vim.g.python_host_skip_check = 1
 vim.g.loaded_python3_provider = 1
