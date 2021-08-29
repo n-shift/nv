@@ -116,11 +116,18 @@ packer.startup({function()
         'hrsh7th/nvim-cmp',
         event = "BufRead",
         requires = {
-            {'hrsh7th/cmp-buffer', after = 'nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lua', after = 'nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp'},
+            { 'hrsh7th/cmp-buffer', after = "nvim-cmp" },
+            { 'hrsh7th/cmp-nvim-lua', after = "nvim-cmp" },
+            { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" },
+            { 'saadparwaiz1/cmp_luasnip', after = "LuaSnip" }
         },
         config = function() require("config.cmp") end
+    }
+
+    -- snippets
+    use {
+        'L3MON4D3/LuaSnip',
+        after = "nvim-cmp",
     }
 
     -- LSP

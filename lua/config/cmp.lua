@@ -38,6 +38,7 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "path" },
+        { name = "luasnip" },
     },
     mapping = {
         ["<cr>"] = cmp.mapping.confirm(),
@@ -52,9 +53,19 @@ cmp.setup({
                 nvim_lsp = "[LSP]",
                 nvim_lua = "[Nvim]",
                 path = "[Path]",
+                luasnip = "[Snippet]",
             })[entry.source.name]
 
             return item
+        end,
+    },
+    snippet = {
+        expand = function(args)
+            local present_snip, luasnip = pcall(require, "luasnip")
+            if not present_snip then
+                return
+            end
+            luasnip.lsp_expand(args.body)
         end,
     },
 })
