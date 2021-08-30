@@ -88,3 +88,19 @@ rust_tools.setup({
         },
     },
 })
+
+local present_lua, lua = pcall(require, "lua-dev")
+if not present_lua then
+    return
+end
+
+local luadev = lua.setup({
+    lspconfig = {
+        cmd = { "lua-language-server", "-E", "C:\\Users\\shift/.code/lua/lua-language-server/main.lua" },
+        autostart = true,
+        capabilites = capabilites,
+        on_attach = on_attach,
+    },
+})
+
+lspconfig.sumneko_lua.setup(luadev)

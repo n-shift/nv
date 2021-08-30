@@ -6,7 +6,7 @@ if not present_config then return end
 
 packer.reset()
 
-packer.startup({function()
+packer.startup({function(use)
     -- SELF-MANAGEMENT
     use 'wbthomason/packer.nvim'
 
