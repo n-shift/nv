@@ -11,7 +11,7 @@ local escapes = {
 local leader = {
     prefix = "<leader>",
     { "l", "<cmd>luaf%<cr>" },
-    { "q", "<cmd>Neoformat<cr>" },
+    { "q", "<cmd>Format<cr>" },
 }
 
 local packer = {

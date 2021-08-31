@@ -31,8 +31,9 @@ packer.startup({function(use)
 
     -- text formatter
     use {
-        'sbdchd/neoformat',
-        cmd = "Neoformat"
+        'mhartington/formatter.nvim',
+        config = function() require("config.formatter") end,
+        cmd = "Format"
     }
 
     -- simple markdown preview
