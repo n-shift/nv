@@ -35,6 +35,12 @@ packer.startup({function(use)
         cmd = "Neoformat"
     }
 
+    -- simple markdown preview
+    use {
+        'ellisonleao/glow.nvim',
+        ft = { "markdown" }
+    }
+
     -- TPOPE SECTION
 
     -- quickly deal with pairs of ...
@@ -80,6 +86,11 @@ packer.startup({function(use)
     use {
         'projekt0n/circles.nvim',
         config = function() require("config.circles") end
+    }
+
+    -- netrw's gx, but in vanilla vimscript
+    use {
+        'tyru/open-browser.vim'
     }
     
     -- GIT
