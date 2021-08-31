@@ -1,48 +1,54 @@
+-- shortcuts
+local g = vim.g
+local opt = vim.opt
+local o = vim.o
+local cmd = vim.cmd
+
 -- set neovim config directory location
-vim.g.config = "~/.config/nvim/"
+g.config = "~/.config/nvim/"
 
 -- set leader key to semicolon
-vim.g.mapleader = ";"
+g.mapleader = ";"
 
 -- enable current line highlighting
-vim.opt.cul = true
+opt.cul = true
 
 -- disable ~ on eob
-vim.opt.fillchars = { eob = " " }
+opt.fillchars = { eob = " " }
 
 -- set maximum amount of completion items to 10
-vim.opt.ph = 10
+opt.ph = 10
 
 -- make splits open to down and right
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+opt.splitbelow = true
+opt.splitright = true
 
 -- disable providers
-vim.g.python_host_skip_check = 1
-vim.g.loaded_python3_provider = 1
-vim.g.loaded_python_provider = 1
-vim.g.loaded_node_provider = 1
-vim.g.loaded_ruby_provider = 1
-vim.g.loaded_perl_provider = 1
+g.python_host_skip_check = 1
+g.loaded_python3_provider = 1
+g.loaded_python_provider = 1
+g.loaded_node_provider = 1
+g.loaded_ruby_provider = 1
+g.loaded_perl_provider = 1
 
 -- number stuff
-vim.opt.nu = true
-vim.opt.rnu = true
-vim.opt.nuw = 1
+opt.nu = true
+opt.rnu = true
+opt.nuw = 1
 
 -- tab stuff
-vim.opt.tabstop = 4
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+opt.tabstop = 4
+opt.expandtab = true
+opt.shiftwidth = 4
 
 -- disable intro
-vim.opt.shortmess:append("sI")
+opt.shortmess:append("sI")
 
 -- enable terminal colors
-vim.o.termguicolors = true
+o.termguicolors = true
 
 -- disable shada
-vim.cmd "set shada=\"NONE\""
+opt.shadafile = "NONE"
 
 -- disable built-in plugins
 local disabled_built_ins = {
@@ -67,5 +73,5 @@ local disabled_built_ins = {
 }
 
 for _, plugin in pairs(disabled_built_ins) do
-    vim.g["loaded_" .. plugin] = 1
+    g["loaded_" .. plugin] = 1
 end
