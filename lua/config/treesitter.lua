@@ -11,6 +11,7 @@ treesitter.setup({
         "json",
         "yaml",
         "rust",
+        "haskell",
         "comment",
     },
     highlight = {
