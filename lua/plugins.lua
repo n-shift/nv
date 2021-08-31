@@ -26,6 +26,15 @@ packer.startup({function(use)
         config = function() require("config.treesitter") end,
         run = ':TSUpdate'
     }
+
+    -- statusline
+    use {
+        'hoob3rt/lualine.nvim',
+        requires = {
+            'kyazdani42/nvim-web-devicons'
+        },
+        config = function() require("config.statusline") end
+    }
     
     -- TEXT
 
