@@ -66,3 +66,5 @@ nest.applyKeymaps(n_gitsigns)
 nest.applyKeymaps(v_gitsigns)
 nest.applyKeymaps(n_openbrowser)
 nest.applyKeymaps(v_openbrowser)
+
+nest.applyKeymaps({"<leader>gh", "<cmd>call Github()<cr>"})
