@@ -4,9 +4,6 @@ local opt = vim.opt
 local o = vim.o
 local cmd = vim.cmd
 
--- set neovim config directory location
-g.config = "~/.config/nvim/"
-
 -- set leader key to semicolon
 g.mapleader = ";"
 

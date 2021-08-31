@@ -24,7 +24,7 @@ local packer = {
     { "p", "<cmd>PackerProfile<cr>" },
     { "t", "<cmd>PackerStatus<cr>" },
     { "d", "<cmd>PackerClean<cr>" },
-    { "o", table.concat({ "<cmd>e ", vim.g.config, "lua/plugins.lua<cr>" }) },
+    { "o", "<cmd>PackerConfig<cr>" },
 }
 
 local telescope = {
