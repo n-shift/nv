@@ -13,6 +13,10 @@ vim.opt.fillchars = { eob = " " }
 -- set maximum amount of completion items to 10
 vim.opt.ph = 10
 
+-- make splits open to down and right
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- disable providers
 vim.g.python_host_skip_check = 1
 vim.g.loaded_python3_provider = 1
