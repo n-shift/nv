@@ -1,5 +1,5 @@
-local present, crates = pcall(require, "crates")
-if not present then
+local crates = prequire("crates")
+if not crates then
     return
 end
 

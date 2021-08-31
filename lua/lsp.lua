@@ -1,5 +1,5 @@
-local present_lspconfig, lspconfig = pcall(require, "lspconfig")
-if not present_lspconfig then
+local lspconfig = prequire("lspconfig")
+if not lspconfig then
     return
 end
 
@@ -38,8 +38,8 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
-local present_rust, rust_tools = pcall(require, "rust-tools")
-if not present_rust then
+local rust_tools = prequire("rust-tools")
+if not rust_tools then
     return
 end
 
@@ -89,8 +89,8 @@ rust_tools.setup({
     },
 })
 
-local present_lua, lua = pcall(require, "lua-dev")
-if not present_lua then
+local lua = prequire("lua-dev")
+if not lua then
     return
 end
 

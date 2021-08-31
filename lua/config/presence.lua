@@ -1,5 +1,4 @@
-local present, presence = pcall(require, "presence")
-
+local presence = prequire("presence")
 if not presence then
     return
 end

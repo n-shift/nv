@@ -1,5 +1,5 @@
-local present, cmp = pcall(require, "cmp")
-if not present then
+local cmp = prequire("cmp")
+if not cmp then
     return
 end
 
@@ -61,8 +61,8 @@ cmp.setup({
     },
     snippet = {
         expand = function(args)
-            local present_snip, luasnip = pcall(require, "luasnip")
-            if not present_snip then
+            local luasnip = prequire("luasnip")
+            if not luasnip then
                 return
             end
             luasnip.lsp_expand(args.body)

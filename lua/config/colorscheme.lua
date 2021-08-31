@@ -1,5 +1,5 @@
-local present, catppuccino = pcall(require, "catppuccino")
-if not present then
+local catppuccino = prequire("catppuccino")
+if not catppuccino then
     return
 end
 

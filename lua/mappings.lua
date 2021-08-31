@@ -1,5 +1,5 @@
-local present, nest = pcall(require, "nest")
-if not present then
+local nest = prequire("nest")
+if not nest then
     return
 end
 

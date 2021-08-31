@@ -1,8 +1,8 @@
-local present_packer, packer = pcall(require, "packer")
-local present_config, config = pcall(require, "config.packer")
+local packer = prequire("packer")
+local config = prequire("config.packer")
 
-if not present_packer then return end
-if not present_config then return end
+if not packer then return end
+if not config then return end
 
 packer.reset()
 
