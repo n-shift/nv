@@ -2,7 +2,6 @@
 local g = vim.g
 local opt = vim.opt
 local o = vim.o
-local cmd = vim.cmd
 
 -- set leader key to semicolon
 g.mapleader = ";"
@@ -15,6 +14,9 @@ opt.fillchars = { eob = " " }
 
 -- set maximum amount of completion items to 10
 opt.ph = 10
+
+-- set minimal number of screeen lines abow and below cursor
+opt.scrolloff = 1000
 
 -- make splits open to down and right
 opt.splitbelow = true
