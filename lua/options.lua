@@ -37,6 +37,9 @@ vim.opt.shortmess:append("sI")
 -- enable terminal colors
 vim.o.termguicolors = true
 
+-- disable shada
+vim.cmd "set shada=\"NONE\""
+
 -- disable built-in plugins
 local disabled_built_ins = {
     "2html_plugin",
