@@ -1,12 +1,20 @@
+-- try to import lspconfig
 local lspconfig = prequire("lspconfig")
 if not lspconfig then
     return
 end
 
+-- tell lsp about nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
+-- do something on lsp attach
 local function on_attach(_, bufnr)
+    -- set mappings only in current buffer with lsp enabled
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
+    -- set options only in current buffer with lsp enabled
     local function buf_set_option(...)
         vim.api.nvim_buf_set_option(bufnr, ...)
     end
@@ -35,43 +43,26 @@ local function on_attach(_, bufnr)
     buf_set_keymap("v", "<leader>ca", "<cmd>lua vim.lsp.buf.range_code_action()<CR>", opts)
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
-
-local rust_tools = prequire("rust-tools")
-if not rust_tools then
+-- require rust lsp configurator
+local rust = prequire("rust-tools")
+if not rust then
     return
 end
 
-rust_tools.setup({
+-- require lua lsp configurator
+local lua = prequire("lua-dev")
+if not lua then
+    return
+end
+
+-- setup rust lsp
+rust.setup({
     tools = {
-        autoSetHints = true,
-        hover_with_icons = true,
-        runnables = {
-            use_telescope = true,
-        },
-        debuggables = {
-            use_telescope = true,
-        },
         inlay_hints = {
-            only_current_line = false,
-            show_parameter_hints = true,
             parameter_hints_prefix = ":: ",
             other_hints_prefix = ": ",
-            max_len_allign = false,
-            highlight = "Comment",
         },
         hover_actions = {
-            border = {
-                { "╭", "FloatBorder" },
-                { "─", "FloatBorder" },
-                { "╮", "FloatBorder" },
-                { "│", "FloatBorder" },
-                { "╯", "FloatBorder" },
-                { "─", "FloatBorder" },
-                { "╰", "FloatBorder" },
-                { "│", "FloatBorder" },
-            },
             auto_focus = true,
         },
     },
@@ -89,11 +80,7 @@ rust_tools.setup({
     },
 })
 
-local lua = prequire("lua-dev")
-if not lua then
-    return
-end
-
+-- set up lua lsp
 local luadev = lua.setup({
     lspconfig = {
         cmd = { "lua-language-server", "-E", "C:\\Users\\shift/.code/lua/lua-language-server/main.lua" },
