@@ -1,11 +1,14 @@
+-- load packer
 local packer = prequire("packer")
 local config = prequire("config.packer")
 
 if not packer then return end
 if not config then return end
 
+-- reset packer's previous config
 packer.reset()
 
+-- specify plugins and config
 packer.startup({function(use)
     -- SELF-MANAGEMENT
     use 'wbthomason/packer.nvim'
@@ -98,11 +101,6 @@ packer.startup({function(use)
         config = function() require("config.circles") end
     }
 
-    -- netrw's gx, but in vanilla vimscript
-    use {
-        'tyru/open-browser.vim'
-    }
-    
     -- GIT
 
     -- git diff signs

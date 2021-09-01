@@ -55,17 +55,11 @@ local v_gitsigns = {
     { "r", "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
 }
 
-local n_openbrowser = { options = { noremap = false }, { "gx", "<Plug>(openbrowser-open)" } }
-local v_openbrowser = { options = { noremap = false }, mode = "v", { "vx", "<Plug>(openbrowser-open)" } }
-
 nest.applyKeymaps(escapes)
 nest.applyKeymaps(packer)
 nest.applyKeymaps(leader)
 nest.applyKeymaps(telescope)
 nest.applyKeymaps(n_gitsigns)
 nest.applyKeymaps(v_gitsigns)
-nest.applyKeymaps(n_openbrowser)
-nest.applyKeymaps(v_openbrowser)
 
-nest.applyKeymaps({"<leader>gh", "<cmd>call Github()<cr>"})
 nest.applyKeymaps({"<leader>m", "<cmd>split | terminal<cr>"})
