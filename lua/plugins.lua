@@ -113,23 +113,6 @@ packer.startup({function(use)
         cond = function() return vim.fn.isdirectory(".git") == 1 end
     }
 
-    -- LOCAL PLUGINS
-
-    -- Cargo.toml utils
-    use {
-        '~/.code/lua/crates.nvim',
-        config = function() require("config.crates") end
-    }
-
-    -- INTEGRATIONS
-
-    -- manage DRPC
-    use {
-        'andweeb/presence.nvim',
-        cmd = "RPC",
-        config = function() require("config.presence") end
-    }
-
     -- COMPLETION
 
     -- completion engine
@@ -168,7 +151,6 @@ packer.startup({function(use)
             "nvim-lua/plenary.nvim",
             "nvim-lua/popup.nvim",
             "nvim-telescope/telescope.nvim",
-            "mfussenegger/nvim-dap",
         },
     }
 
