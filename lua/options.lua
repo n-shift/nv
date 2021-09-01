@@ -45,6 +45,8 @@ opt.shortmess:append("sI")
 
 -- enable terminal colors
 o.termguicolors = true
+-- set shell to powershell core
+opt.shell = "pwsh"
 
 -- disable shada
 opt.shadafile = "NONE"

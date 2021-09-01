@@ -68,3 +68,4 @@ nest.applyKeymaps(n_openbrowser)
 nest.applyKeymaps(v_openbrowser)
 
 nest.applyKeymaps({"<leader>gh", "<cmd>call Github()<cr>"})
+nest.applyKeymaps({"<leader>m", "<cmd>split | terminal<cr>"})
