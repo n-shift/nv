@@ -7,11 +7,9 @@ catppuccino.setup({
     colorscheme = "dark_catppuccino",
     transparency = false,
     styles = {
-        comments = "italic",
+        comments = "NONE",
         functions = "NONE",
         keywords = "NONE",
-        strings = "NONE",
-        variables = "NONE",
     },
     integrations = {
         treesitter = true,
@@ -24,21 +22,13 @@ catppuccino.setup({
                 information = "bold",
             },
         },
-        lsp_trouble = false,
-        lsp_saga = false,
-        gitgutter = false,
         gitsigns = true,
         telescope = true,
-        nvimtree = false,
-        which_key = false,
-        indent_blankline = false,
+        nvimtree = {
+            enabled = true,
+            show_root = true,
+        },
         dashboard = true,
-        neogit = false,
-        vim_sneak = false,
-        fern = false,
-        barbar = false,
-        bufferline = false,
-        markdown = false,
     },
 })
 
