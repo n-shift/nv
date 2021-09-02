@@ -15,8 +15,43 @@
 
 nv is a lua neovim config which tries to be simple, cute and well-documented
 
+## Installation
+
+1. Backup your previous neovim config if it exists
+2. Run `git clone https://github.com/shift-d/nv ~/.config/nvim` in your favourite shell
+3. Open neovim inside config directory
+4. Type `:PackerInstall`
+5. Reopen neovim - and... done!
+
+### Optional
+- Install [glow](https://github.com/ellisonleao/glow) (required for default markdown preview)
+- Install [sumneko-lua](https://github.com/sumneko/lua-language-server) (required for lua LSP)
+- Install [rust-analyzer](https://rust-analyzer.github.io/) (required for rust LSP)
+- Add [LspInstall](https://github.com/williamboman/nvim-lsp-installer) plugin
+    - NOTE: I'd recommend this plugin because it is crossplatform, unlike other LspInstall plugins
+    - NOTE: I did not include this plugin because I wanted users to decide whether they want to install lsp servers manually or not
+
+## Configuration
+
+Feel free to configurate everything!
+Unlike [NvChad](https://github.com/NvChad/NvChad) and [kyoto.nvim](https://github.com/samrath2007/kyoto.nvim) nv provdes only glue for your config.
+Make it yourself!
+
+Please, review every config file. If you don't know what exactly this option does - run `:h $option` or if it's in plugin config - visit it's README.md.
+
+## Directory overview
+
+`init.lua` - file that imports every module
+`lua/` - folder that should be used for containing `*.lua` files
+`lua/config/` - folder for plugin configuration files
+`lua/options.lua` - `vim.opt`, `vim.o` and `vim.g` options
+`lua/mappings.lua` - keybindings handled by [nest.nvim](https://github.com/LionC/nest.nvim)
+`lua/plugins.lua` - plugin specification file; more info in [Plugins](#Plugins) section
+`lua/lsp.lua` - LSP settings
+
 ## Plugins
 
+Plugins in nv are managed with [packer.nvim](https://github.com/wbthomason/packer.nvim)
 List below contains every plugin provided by default with notes about it's configuration
 
 ### Colors
