@@ -48,6 +48,9 @@ Please, review every config file. If you don't know what exactly this option doe
 `lua/mappings.lua` - keybindings handled by [nest.nvim](https://github.com/LionC/nest.nvim)
 `lua/plugins.lua` - plugin specification file; more info in [Plugins](#Plugins) section
 `lua/lsp.lua` - LSP settings
+`lua/utils.lua` - global functions for lua
+`viml/` - folder that should be used for containing  `*.vim` files
+`viml/commands.vim` - definitions of user commands and autocommands
 
 ## Plugins
 
@@ -163,3 +166,16 @@ Rust lsp configurator that makes use of nvim-lspconfig. Here is only for an exam
 #### [folke/lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 Dev setup for init.lua and plugin development with full signature help, docs and completion for nvim lua API.
 - loads if current buffer has `lua` type
+
+
+# FAQ
+
+## Why use vimscript and not write entire config in lua?
+
+Sometimes you are not able to write code in lua, so you have to call vimscript from lua.
+In my opinion, making stacks of `vim.cmd(...` is a bad idea, so I'd like to separate vimscript only categories from lua code.
+In case of this config, defining commands and autocommands is not supported in neovim lua api _yet_, so that's why I moved their definition to .vim file.
+
+NOTE: related PR's for adding commands and autocommands support for lua API:
+[neovim/neovim#11613](https://github.com/neovim/neovim/pull/11613)
+[neovim/neovim#14661](https://github.com/neovim/neovim/pull/14661)
