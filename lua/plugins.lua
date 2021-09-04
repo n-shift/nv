@@ -1,15 +1,10 @@
 -- load packer
-local packer = prequire("packer")
-local config = prequire("config.packer")
+local packer = prequire("config.packer")
 
 if not packer then return end
-if not config then return end
-
--- reset packer's previous config
-packer.reset()
 
 -- specify plugins and config
-packer.startup({function(use)
+packer.startup(function(use)
     -- SELF-MANAGEMENT
     use 'wbthomason/packer.nvim'
 
@@ -158,6 +153,5 @@ packer.startup({function(use)
         ft = {"lua"}
     }
 
-end,
-config = config
-})
+end
+)
