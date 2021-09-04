@@ -43,42 +43,11 @@ local function on_attach(_, bufnr)
     buf_set_keymap("v", "<leader>ca", "<cmd>lua vim.lsp.buf.range_code_action()<CR>", opts)
 end
 
--- require rust lsp configurator
-local rust = prequire("rust-tools")
-if not rust then
-    return
-end
-
 -- require lua lsp configurator
 local lua = prequire("lua-dev")
 if not lua then
     return
 end
-
--- setup rust lsp
-rust.setup({
-    tools = {
-        inlay_hints = {
-            parameter_hints_prefix = ":: ",
-            other_hints_prefix = ": ",
-        },
-        hover_actions = {
-            auto_focus = true,
-        },
-    },
-    server = {
-        autostart = false,
-        capabilities = capabilites,
-        on_attach = on_attach,
-        settings = {
-            ["rust-analyzer"] = {
-                procMacro = {
-                    enable = true,
-                },
-            },
-        },
-    },
-})
 
 -- set up lua lsp
 local luadev = lua.setup({
