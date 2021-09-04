@@ -339,6 +339,18 @@ Default `<leader>` key is set in `lua/options.lua`
 - unnamed mappings
     - `<leader>m` -> `:split | terminal` - open terminal in horizontal split
 
+## LSP
+
+Lsp configuration by default is stored in `lua/lsp.lua`
+
+Quick overview of everything in file:
+- `capabilities` - lsp capabilities modified for `nvim-cmp` support
+- `on_attach` - code that executes only after lsp attaches to buffer. Here we define local keybindings.
+
+After all, we can now extend lsp in two ways:
+1. Provide [options](https://github.com/neovim/nvim-lspconfig) to `lspconfig.lsp_name.setup()`
+2. Set up via external plugin (often uses similar structure as lspconfig's options). In nv there's [lua-dev](#folkelua-devnvim) plugin for setting up lua lsp.
+
 # FAQ
 
 ## Why use vimscript and not write entire config in lua?
