@@ -17,16 +17,50 @@ nv is a lua neovim config which tries to be simple, cute and well-documented
 
 ## Installation
 
+### Pre-requisites
+
+#### For installation
+- [neovim v0.5.0+](https://neovim.io) (required for lua support)
+- git
+
+#### Requirements for default config to work
+- [Nerd patched font](https://www.nerdfonts.com/) - used by nvim-web-devicons
+- [glow](https://github.com/charmbracelet/glow) - used by [glow.nvim](#ellisonleaoglownvim)
+- [sumneko-lua](https://github.com/sumneko/lua-language-server) - used by [lua-dev](#folkelua-devnvim)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - default [telescope](#nvim-telescopetelescopenvim) grep searcher
+
+
+### Manual
+
 1. Backup your previous neovim config if it exists
-2. Run `git clone https://github.com/shift-d/nv ~/.config/nvim` in your favourite shell
+2. Clone repository into config folder
+    - Windows
+        - cmd
+            - default: `git clone https://github.com/shift-d/nv --depth 1 %LOCALAPPDATA%\nvim\`
+            - XDG_CONFIG_HOME is set: `git clone https://github.com/shift-d/nv --depth 1 %XDG_CONFIG_HOME%\nvim\`
+        - powershell
+            - default: `git clone https://github.com/shift-d/nv --depth 1 $env:LOCALAPPDATA\nvim\`
+            - XDG_CONFIG_HOME is set: `git clone https://github.com/shift-d/nv --depth 1 $env:XDG_CONFIG_HOME\nvim\`
+    - Unix:
+        - default: `git clone https://github.com/shift-d/nv --depth 1 ~/.config/nvim/`
+        - XDG_CONFIG_HOME is set: `git clone https://github.com/shift-d/nv -- depth 1 $XDG_CONFIG_HOME/nvim/`
 3. Open neovim inside config directory
 4. Type `:PackerInstall`
 5. Reopen neovim - and... done!
 
-### Optional
-- Install [glow](https://github.com/ellisonleao/glow) (required for default markdown preview)
-- Install [sumneko-lua](https://github.com/sumneko/lua-language-server) (required for lua LSP)
-- Install [rust-analyzer](https://rust-analyzer.github.io/) (required for rust LSP)
+### Script
+
+#### Windows
+1. Open powershell
+2. Run `Invoke-WebRequest https://raw.githubusercontent.com/shift-d/nv/main/scripts/install.ps1 | select -ExpandProperty Content | Invoke-Expression`
+3. Follow steps 3-5 from [manual installation](#manual)
+
+#### Unix
+1. Open shell
+2. Run `curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/shift-d/nv/main/scripts/install.sh | bash`
+3. Follow steps 3-5 from [manual installation](#manual)
+
+### Post-installation
 - Add [LspInstall](https://github.com/williamboman/nvim-lsp-installer) plugin
     - NOTE: I'd recommend this plugin because it is crossplatform, unlike other LspInstall plugins
     - NOTE: I did not include this plugin because I wanted users to decide whether they want to install lsp servers manually or not
@@ -51,6 +85,15 @@ Please, review every config file. If you don't know what exactly this option doe
 `lua/utils.lua` - global functions for lua
 `viml/` - folder that should be used for containing  `*.vim` files
 `viml/commands.vim` - definitions of user commands and autocommands
+
+## Comparison to other configs
+
+State|nv|NvChad|kyoto.nvim|Lunarvim|
+-----|--|------|----------|--------|
+Number of plugins | 17 | 33 | 30 | 26|
+Why | simplicity and well-documented | fast and pretty | fast and customizable | sane defaults|
+Installation | crossplatform | crossplatform | linux/macos only | [not yet](https://github.com/LunarVim/LunarVim/pull/1261)
+Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
 
 ## Plugins
 
