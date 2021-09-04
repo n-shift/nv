@@ -16,7 +16,7 @@ fi
 
 # If destination path is not empty - exit with a message
 if [[ -d "$dir" ]]; then
-    echo "Seems like you already have config in this path: `$dir`"
+    echo "Seems like you already have config in this path: \`$dir\`"
     exit 1
 fi
 
