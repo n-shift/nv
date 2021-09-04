@@ -7,13 +7,13 @@ local o = vim.o
 g.mapleader = ";"
 
 -- enable current line highlighting
-opt.cul = true
+opt.cursorline = true
 
 -- disable ~ on eob
 opt.fillchars = { eob = " " }
 
 -- set maximum amount of completion items to 10
-opt.ph = 10
+opt.pumheight = 10
 
 -- set minimal number of screeen lines abow and below cursor
 opt.scrolloff = 1000
@@ -31,9 +31,9 @@ g.loaded_ruby_provider = 1
 g.loaded_perl_provider = 1
 
 -- number stuff
-opt.nu = true
-opt.rnu = true
-opt.nuw = 1
+opt.number = true
+opt.relativenumber = true
+opt.numberwidth = 1
 
 -- tab stuff
 opt.tabstop = 4
