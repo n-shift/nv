@@ -234,3 +234,7 @@ In case of this config, defining commands and autocommands is not supported in n
 NOTE: related PR's for adding commands and autocommands support for lua API:
 [neovim/neovim#11613](https://github.com/neovim/neovim/pull/11613)
 [neovim/neovim#14661](https://github.com/neovim/neovim/pull/14661)
+
+# Credits
+[siduck76](https://github.com/siduck76) - for his inspirational [NvChad](https://github.com/NvChad/NvChad)
+[samrath2007](https://github.com/samrath2007) - for his amazing [kyoto.nvim](https://github.com/samrath2007/kyoto.nvim)
