@@ -122,6 +122,35 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 
 # Documentation
 
+## Settings
+
+Settings are located in `lua/options.lua`. By 'settings' I mean `vim.o.`, `vim.opt.` and `vim.g.` ones.
+
+- `<leader>` is set to `;`
+- current line highlighting is enabled
+- tildas (`~`) at the end of buffer are disabled
+- maximum amount of completion items is 10
+- minimal number of lines abow and below cursor is 1000, so cursor is almost always ar center
+- splits open to down and right
+- other lanugage providers are disabled
+- hybrid numeration is enabled and default numberwidth is set to 1
+- tabs are set to 4 spaces
+- neovim intro is disabled
+- terminal colors are enabled
+- shada file is disabled
+- disabled built-in plugins:
+    - 2html
+    - getscript
+    - gzip
+    - logipat
+    - netrw
+    - matchit
+    - tar
+    - rrhelper
+    - spellfile
+    - vimball
+    - zip
+
 ## Plugins
 
 Plugins in nv are managed with [packer.nvim](https://github.com/wbthomason/packer.nvim)
