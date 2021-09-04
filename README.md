@@ -75,16 +75,17 @@ Please, review every config file. If you don't know what exactly this option doe
 
 ## Directory overview
 
-`init.lua` - file that imports every module
-`lua/` - folder that should be used for containing `*.lua` files
-`lua/config/` - folder for plugin configuration files
-`lua/options.lua` - `vim.opt`, `vim.o` and `vim.g` options
-`lua/mappings.lua` - keybindings handled by [nest.nvim](https://github.com/LionC/nest.nvim)
-`lua/plugins.lua` - plugin specification file; more info in [Plugins](#Plugins) section
-`lua/lsp.lua` - LSP settings
-`lua/utils.lua` - global functions for lua
-`viml/` - folder that should be used for containing  `*.vim` files
-`viml/commands.vim` - definitions of user commands and autocommands
+- `init.lua` - file that imports every module
+- `lua/` - folder that should be used for containing `*.lua` files
+    - `config/` - folder for plugin configuration files
+        - `packer.lua` - [packer.nvim](https://github.com/wbthomason/packer.nvim) config and autoinstall
+    - `options.lua` - `vim.opt`, `vim.o` and `vim.g` options
+    - `mappings.lua` - keybindings handled by [nest.nvim](https://github.com/LionC/nest.nvim)
+    - `plugins.lua` - plugin specification file; more info in [Plugins](#Plugins) section
+    - `lsp.lua` - LSP settings
+    - `utils.lua` - global functions for lua
+- `viml/` - folder that should be used for containing  `*.vim` files
+    - `viml/commands.vim` - definitions of user commands and autocommands
 
 ## Comparison to other configs
 
