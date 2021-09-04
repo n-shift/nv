@@ -96,6 +96,25 @@ Why | simplicity and well-documented | fast and pretty | fast and customizable |
 Installation | crossplatform | crossplatform | linux/macos only | [not yet](https://github.com/LunarVim/LunarVim/pull/1261)
 Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
 
+## Screenshots
+
+#### dashboard
+[![dashboard](https://i.postimg.cc/XvYwCxQd/image.png)](https://postimg.cc/WdxFRmR1)
+#### opened file
+[![opened file](https://i.postimg.cc/rwPpfJqS/image.png)](https://postimg.cc/bZ18J1DJ)
+#### glow in action
+[![glow in action](https://i.postimg.cc/ZqxMTf0N/image.png)](https://postimg.cc/Tyh90JV2)
+#### nvimtree
+[![NvimTree](https://i.postimg.cc/1RjY5VRv/image.png)](https://postimg.cc/qg2G1R3K)
+#### nvim-cmp and luasnip
+[![nvim-cmp x luasnip](https://i.postimg.cc/ZYBXNxMG/image.png)](https://postimg.cc/vDyPFfMh)
+#### telescope.nvim
+[![telescope.nvim](https://i.postimg.cc/jSs8MHMd/image.png)](https://postimg.cc/MvFbTQkh)
+#### lualine
+[![lualine](https://i.postimg.cc/8cRHHcW6/image.png)](https://postimg.cc/5QtL9xs4)
+
+# Documentation
+
 ## Plugins
 
 Plugins in nv are managed with [packer.nvim](https://github.com/wbthomason/packer.nvim)
@@ -198,14 +217,6 @@ Neovim snippet engine built in lua
 Native neovim lsp configurator
 - loads after `cmp-nvim-lsp` plugin
 - config is located in `lua/lsp.lua`
-
-#### [simrat39/rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim)
-Rust lsp configurator that makes use of nvim-lspconfig. Here is only for an example of lsp usage.
-- requires
-    - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-    - [nvim-lua/plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
-    - [nvim-lua/popup.nvim](https://github.com/nvim-lua/popup.nvim)
-    - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope)
 
 #### [folke/lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 Dev setup for init.lua and plugin development with full signature help, docs and completion for nvim lua API.
