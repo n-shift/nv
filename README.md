@@ -8,6 +8,13 @@
 
 <div align="center">
 
+<a href="https://github.com/shift-d/nv">
+    <img src="https://img.shields.io/github/repo-size/shift-d/nv?style=flat-square&label=Repo" alt="GitHub repository size"/>
+</a>
+<a href="https://github.com/shift-d/nv/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/siduck76/NvChad?style=flat-square&logo=GNU&label=License" alt="License"/>
+</a>
+
 [![Neovim Minimum Version](https://img.shields.io/badge/Neovim-0.5+-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=white)](https://github.com/neovim/neovim)
 [![Last Commit](https://img.shields.io/github/last-commit/shift-d/nv.svg?style=flat-square&label=Last%20Commit&color=58eb34)](https://github.com/shift-d/nv/pulse)
 
