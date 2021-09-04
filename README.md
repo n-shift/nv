@@ -230,6 +230,85 @@ Native neovim lsp configurator
 Dev setup for init.lua and plugin development with full signature help, docs and completion for nvim lua API.
 - loads if current buffer has `lua` type
 
+## (Auto)commands
+
+Located in `viml/commands.vim`
+
+### Commands
+
+#### PackerSource
+
+Execute file with plugin specification
+```vim
+command! PackerSource :luaf ~/.config/nvim/lua/plugins.lua
+```
+
+#### PackerConfig
+
+Open file with plugin specification
+```vim
+command! PackerConfig :e ~/.config/nvim/lua/plugins.lua
+```
+
+### Autocommands
+
+#### termin augroup
+
+Group for autocommands related to terminal
+
+- TermOpen
+    - If terminal is opened - remove numbers
+    ```vim
+    au TermOpen term://* | setlocal nonumber norelativenumber
+    ```
+
+## Mappings
+
+Located in `lua/mappings.lua`. Created using [nest.nvim](#nestnvim).
+Default `<leader>` key is set in `lua/options.lua`
+
+###### Please note that `<cmd>...<cr>` syntax is replaced in README with `:...`, `<cmd>lua require...` with `plugin_name...`
+
+- escapes (escape from specific mode to normal)
+    - insert mode, `jk` -> escape
+    - terminal mode, `jk` -> `C-\ C-n`
+- leader (`<leader>key` mappings)
+    - prefix for all mappings here - `<leader>`
+    - `l` -> `:luaf%` (execute current buffer's lua code)
+    - `q` -> `:Format` (format current buffer)
+- packer ([packer.nvim](https://github.com/wbthomason/packer.nvim) related mappings)
+    - prefix for all mappings here - `<leader>p`
+    - `i` -> `:PackerInstall` - install plugins from spec
+    - `S` -> `:PackerSource` - [custom](#PackerSource)
+    - `s` -> `:PackerSync` - synchronize with config and update plugins
+    - `u` -> `:PackerUpdate` - update plugins
+    - `c` -> `:PackerCompile` - synchronize with config
+    - `p` -> `:PackerProfile` - see how much `plugin/packer_compiled.lua` parts loading take
+    - `t` -> `:PackerStatus` - check plugins' status
+    - `d` -> `:PackerClean` - remove plugins that don't match with spec
+    - `o` -> `:PackerConfig` - [custom](#PackerConfig)
+- telescope ([telescope.nvim](#nvim-telescopetelescopenvim) related mappings)
+    - prefix for all mappings here - `<leader>t`
+    - `t` -> `:Telescope` - open telescope
+    - `f` -> `:Telescope fd` - open telescope's file finder
+    - `b` -> `:Telescope buffers` - open telescope's buffer list
+    - `g` -> `:Telescope live_grep` - grep through cwd files
+    - `h` -> `:Telescope command_history` - open command history
+- gitsigns
+    - prefix for all mappings here - `<leader>h`
+    - normal mode
+        - `s` -> `gitsigns.stage_hunk()`
+        - `u` -> `gitsigns.undo_stage_hunk()`
+        - `r` -> `gitsigns.reset_hunk()`
+        - `R` -> `gitsigns.reset_buffer()`
+        - `p` -> `gitsigns.blame_line(true)`
+        - `b` -> `gitsigns.stage_buffer()`
+        - `U` -> `gitsigns.reset_buffer_index()`
+    - visual mode
+        - `s` -> `gitsigns.stage_hunk(.....)`
+        - `r` -> `gitsigns.reset_hunk(.....)`
+- unnamed mappings
+    - `<leader>m` -> `:split | terminal` - open terminal in horizontal split
 
 # FAQ
 
