@@ -85,7 +85,7 @@ Please, review every config file. If you don't know what exactly this option doe
     - `lsp.lua` - LSP settings
     - `utils.lua` - global functions for lua
 - `viml/` - folder that should be used for containing  `*.vim` files
-    - `viml/commands.vim` - definitions of user commands and autocommands
+    - `commands.vim` - definitions of user commands and autocommands
 
 ## Comparison to other configs
 
@@ -118,6 +118,7 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 ## Plugins
 
 Plugins in nv are managed with [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
 List below contains every plugin provided by default with notes about it's configuration
 
 ### Colors
@@ -237,4 +238,5 @@ NOTE: related PR's for adding commands and autocommands support for lua API:
 
 # Credits
 [siduck76](https://github.com/siduck76) - for his inspirational [NvChad](https://github.com/NvChad/NvChad)
+
 [samrath2007](https://github.com/samrath2007) - for his amazing [kyoto.nvim](https://github.com/samrath2007/kyoto.nvim)
