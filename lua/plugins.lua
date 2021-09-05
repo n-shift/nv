@@ -94,6 +94,7 @@ packer.startup(function(use)
     -- uniform icons
     use {
         'projekt0n/circles.nvim',
+        after = 'Catppuccino.nvim',
         config = function() require('config.circles') end,
     }
 
