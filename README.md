@@ -105,16 +105,16 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 
 ## Screenshots
 
+#### overview
+[![overview](https://i.postimg.cc/C5GLb8RG/image.png)](https://postimg.cc/jnjbbLQ2)
 #### dashboard
 [![dashboard](https://i.postimg.cc/XvYwCxQd/image.png)](https://postimg.cc/WdxFRmR1)
-#### opened file
-[![opened file](https://i.postimg.cc/rwPpfJqS/image.png)](https://postimg.cc/bZ18J1DJ)
 #### glow in action
 [![glow in action](https://i.postimg.cc/ZqxMTf0N/image.png)](https://postimg.cc/Tyh90JV2)
 #### nvimtree
-[![NvimTree](https://i.postimg.cc/1RjY5VRv/image.png)](https://postimg.cc/qg2G1R3K)
-#### nvim-cmp and luasnip
-[![nvim-cmp x luasnip](https://i.postimg.cc/ZYBXNxMG/image.png)](https://postimg.cc/vDyPFfMh)
+[![NvimTree](https://i.postimg.cc/gcVYSv0R/image.png)](https://postimg.cc/kD53DRKX)
+#### completion
+[![completion](https://i.postimg.cc/N0cD4qCR/image.png)](https://postimg.cc/sMT5j8r2)
 #### telescope.nvim
 [![telescope.nvim](https://i.postimg.cc/jSs8MHMd/image.png)](https://postimg.cc/MvFbTQkh)
 #### lualine
