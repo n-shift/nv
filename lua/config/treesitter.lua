@@ -5,13 +5,8 @@ end
 
 treesitter.setup({
     ensure_installed = {
-        "c",
         "lua",
         "toml",
-        "json",
-        "yaml",
-        "rust",
-        "haskell",
         "comment",
     },
     highlight = {
