@@ -1,26 +1,21 @@
-vim.cmd("packadd packer.nvim")
-
 local packer = prequire("packer")
 if not packer then
-    local path = table.concat({ vim.fn.stdpath("data"), "/site/pack/packer/opt/packer.nvim" })
-    print("Cloning packer...")
-    vim.fn.delete(path, "rf")
-    vim.fn.system({
-        "git",
-        "clone",
-        "https://github.com/wbthomason/packer.nvim",
-        "--depth",
-        "5",
-        path,
-    })
+    print("Packer was not found")
 
-    vim.cmd("packadd packer.nvim")
-    packer = prequire("packer")
+    local fn = vim.fn
+    local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
-    if packer then
-        print("Packer cloned successfully.")
+    if fn.empty(fn.glob(install_path)) > 0 then
+        print("Installing packer")
+
+        fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+        vim.cmd("packadd packer.nvim")
+        packer = prequire("packer", true)
+        if packer then
+            print("Packer has been installed successfully!")
+        end
     else
-        error(table.concat({ "Could not clone packer.\nPacker path:", path }))
+        print("Seems like packer is installed, but could not be loaded")
     end
 end
 
