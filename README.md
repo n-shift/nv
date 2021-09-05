@@ -294,7 +294,7 @@ Group for autocommands related to terminal
 
 ## Mappings
 
-Located in `lua/mappings.lua`. Created using [nest.nvim](#nestnvim).
+Located in `lua/mappings.lua`. Created using [nest.nvim](#lioncnestnvim).
 Default `<leader>` key is set in `lua/options.lua`
 
 ###### Please note that `<cmd>...<cr>` syntax is replaced in README with `:...`, `<cmd>lua require...` with `plugin_name...`
