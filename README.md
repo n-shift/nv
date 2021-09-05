@@ -108,7 +108,7 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 #### overview
 [![overview](https://i.postimg.cc/C5GLb8RG/image.png)](https://postimg.cc/jnjbbLQ2)
 #### dashboard
-[![dashboard](https://i.postimg.cc/XvYwCxQd/image.png)](https://postimg.cc/WdxFRmR1)
+[![dashboard](https://i.postimg.cc/jSzB6r4r/image.png)](https://postimg.cc/yD8fBtGf)
 #### glow in action
 [![glow in action](https://i.postimg.cc/ZqxMTf0N/image.png)](https://postimg.cc/Tyh90JV2)
 #### nvimtree
