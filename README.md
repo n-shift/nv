@@ -218,6 +218,7 @@ A file explorer tree written in lua
 #### [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
 Replaces `nvim-web-devicons` and lsp's icons with minimalistic colored circles
 - config is located in `lua/config/circles.lua`
+- loads after [Catppuccino.nvim](#pocco81catppuccinonvim)
 
 ### Git
 
