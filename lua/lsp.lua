@@ -54,7 +54,7 @@ local luadev = lua.setup({
     lspconfig = {
         cmd = { "lua-language-server", "-E", "C:\\Users\\shift/.code/lua/lua-language-server/main.lua" },
         autostart = true,
-        capabilites = capabilites,
+        capabilites = capabilities,
         on_attach = on_attach,
     },
 })
