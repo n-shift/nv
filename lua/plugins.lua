@@ -89,13 +89,7 @@ packer.startup(function(use)
         'kyazdani42/nvim-tree.lua',
         config = function() require('config.nvimtree') end,
         requires = 'kyazdani42/nvim-web-devicons',
-    }
-
-    -- uniform icons
-    use {
-        'projekt0n/circles.nvim',
         after = 'Catppuccino.nvim',
-        config = function() require('config.circles') end,
     }
 
     -- GIT

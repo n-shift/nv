@@ -210,15 +210,10 @@ Lua dashboard that you see after open neovim.
 
 #### [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 A file explorer tree written in lua
-- loads on `:NvimTreeToggle` command
+- loads after [Catppuccino.nvim](#pocco81catppuccinonvim)
 - requires
     - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - config is located in `lua/config/nvimtree.lua`
-
-#### [projekt0n/circles.nvim](https://github.com/projekt0n/circles.nvim)
-Replaces `nvim-web-devicons` and lsp's icons with minimalistic colored circles
-- config is located in `lua/config/circles.lua`
-- loads after [Catppuccino.nvim](#pocco81catppuccinonvim)
 
 ### Git
 
