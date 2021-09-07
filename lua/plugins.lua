@@ -92,6 +92,12 @@ packer.startup(function(use)
         after = 'Catppuccino.nvim',
     }
 
+    -- keybinding suggestions
+    use {
+        'folke/which-key.nvim',
+        config = function() require('config.whichkey') end,
+    }
+
     -- GIT
 
     -- git diff signs

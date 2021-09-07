@@ -102,6 +102,7 @@ Number of plugins | 17 | 33 | 30 | 26|
 Why | simplicity and well-documented | fast and pretty | fast and customizable | sane defaults|
 Installation | crossplatform | crossplatform | linux/macos only | [not yet](https://github.com/LunarVim/LunarVim/pull/1261)
 Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
+> Latest update of table: 7.09.21
 
 ## Screenshots
 
@@ -214,6 +215,10 @@ A file explorer tree written in lua
 - requires
     - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - config is located in `lua/config/nvimtree.lua`
+
+#### [folke/which-key.nvim](https://github.com/folke/which-key.nvim)
+Suggest keys as you type
+- config is located in `lua/config/whichkey.lua`
 
 ### Git
 
