@@ -50,9 +50,10 @@ if not lua then
 end
 
 -- set up lua lsp
+local lua_lsp_main = "C:\\Users\\shift\\.code\\lua\\lua-language-server\\main.lua" -- path to main.lua inside cloned sumneko_lua repository
 local luadev = lua.setup({
     lspconfig = {
-        cmd = { "lua-language-server", "-E", "C:\\Users\\shift/.code/lua/lua-language-server/main.lua" },
+        cmd = { "lua-language-server", "-E", lua_lsp_main},
         autostart = true,
         capabilites = capabilities,
         on_attach = on_attach,

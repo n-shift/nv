@@ -352,6 +352,10 @@ After all, we can now extend lsp in two ways:
 1. Provide [options](https://github.com/neovim/nvim-lspconfig) to `lspconfig.lsp_name.setup()`
 2. Set up via external plugin (often uses similar structure as lspconfig's options). In nv there's [lua-dev](#folkelua-devnvim) plugin for setting up lua lsp.
 
+### lua lsp configuration notes
+
+After installing lua-language-server, please, change `lua_lsp_main` to path to `main.lua` inside your lua-language-server installation folder.
+
 # FAQ
 
 ## Why use vimscript and not write entire config in lua?
