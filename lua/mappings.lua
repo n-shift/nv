@@ -55,11 +55,13 @@ local v_gitsigns = {
     { "r", "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
 }
 
-nest.applyKeymaps(escapes)
-nest.applyKeymaps(packer)
-nest.applyKeymaps(leader)
-nest.applyKeymaps(telescope)
-nest.applyKeymaps(n_gitsigns)
-nest.applyKeymaps(v_gitsigns)
+nest.applyKeymaps({
+    escapes,
+    packer,
+    leader,
+    telescope,
+    n_gitsigns,
+    v_gitsigns,
+})
 
 nest.applyKeymaps({"<leader>m", "<cmd>split | terminal<cr>"})
