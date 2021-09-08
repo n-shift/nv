@@ -19,3 +19,33 @@ If you want to help but don't know where to start:
 - Once you start working on a feature - create a draft request, so your work won't interop with someone else's
 - Keep it simple and small
 - Avoid changes to files you're not working on
+
+## Draft PR
+1. Ensure that draft PR does not already exist
+2. Follow PR structure if it is possible
+3. Create roadmap
+```md
+- [ ] Unfinished task
+- [X] Finished task
+```
+
+## Adding plugin
+
+### PR structure
+1. Reason why it must be added
+2. Lua/Viml plugin
+3. Is crossplatform or not
+
+## Adding feature
+
+### PR structure
+1. Reason why it must be added
+2. Lua/Viml feature
+3. Is crossplatform or not
+4. Contains breaking changes or not
+
+## Extending docs
+
+### PR structure
+1. Docs section
+2. Quick overview of changes
