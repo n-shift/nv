@@ -137,6 +137,13 @@ packer.startup(function(use)
         after = 'cmp-nvim-lsp',
         config = function() require('lsp') end,
     }
+
+    -- great ui for lsp
+    use {
+        'glepnir/lspsaga.nvim',
+        after = 'nvim-lspconfig',
+        config = function() require('config.lspsaga') end,
+    }
     
     -- lua lsp defaults
     use {

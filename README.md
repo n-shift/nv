@@ -98,11 +98,11 @@ Please, review every config file. If you don't know what exactly this option doe
 
 State|nv|NvChad|kyoto.nvim|Lunarvim|
 -----|--|------|----------|--------|
-Number of plugins | 17 | 33 | 30 | 26|
+Number of plugins | 18 | 33 | 30 | 26|
 Why | simplicity and well-documented | fast and pretty | fast and customizable | sane defaults|
 Installation | crossplatform | crossplatform | linux/macos only | [not yet](https://github.com/LunarVim/LunarVim/pull/1261)
 Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
-> Latest update of table: 7.09.21
+> Latest update of table: 8.09.21
 
 ## Screenshots
 
@@ -256,6 +256,11 @@ Neovim snippet engine built in lua
 Native neovim lsp configurator
 - loads after `cmp-nvim-lsp` plugin
 - config is located in `lua/lsp.lua`
+
+#### [glepnir/lspsaga.nvim](https://github.com/glepnir/lspsaga)
+UI for neovim lsp
+- loads after `nvim-lspconfig` plugin
+- config is located in `lua/config/lspsaga.lua`
 
 #### [folke/lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 Dev setup for init.lua and plugin development with full signature help, docs and completion for nvim lua API.
