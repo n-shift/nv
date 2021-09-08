@@ -117,8 +117,8 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 [![lualine](https://i.postimg.cc/8cRHHcW6/image.png)](https://postimg.cc/5QtL9xs4)
 
 # nv resources
-- [EXTENDING.md](https://github.com/shift-d/nv/blob/main/EXTENDING.md) - notes about extending nv
-- [DOCS.md](https://github.com/shift-d/nv/blob/main/DOCS.md) - nv documentation
+- [EXTENDING.md](https://github.com/shift-d/nv/blob/main/markdown/EXTENDING.md) - notes about extending nv
+- [DOCS.md](https://github.com/shift-d/nv/blob/main/markdown/DOCS.md) - nv documentation
 
 # FAQ
 
