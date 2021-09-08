@@ -138,17 +138,6 @@ packer.startup(function(use)
         config = function() require('lsp') end,
     }
     
-    -- rust lsp defaults
-    use {
-        'simrat39/rust-tools.nvim',
-        requires = {
-            'neovim/nvim-lspconfig',
-            'nvim-lua/plenary.nvim',
-            'nvim-lua/popup.nvim',
-            'nvim-telescope/telescope.nvim',
-        },
-    }
-
     -- lua lsp defaults
     use {
         'folke/lua-dev.nvim',
