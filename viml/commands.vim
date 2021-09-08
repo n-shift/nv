@@ -1,6 +1,6 @@
 " commands definition
-command! PackerSource :luaf ~/.config/nvim/lua/plugins.lua
-command! PackerConfig :e ~/.config/nvim/lua/plugins.lua
+command! PackerSource :execute 'luaf ' . g:configdir . '/lua/plugins.lua'
+command! PackerConfig :execute 'edit ' . g:configdir . '/lua/plugins.lua'
 
 " autocommands definition
 augroup termin

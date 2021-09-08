@@ -5,4 +5,4 @@ require("options") -- vim options
 require("mappings") -- nest mappings
 
 -- source vimscript files
-vim.cmd("source $HOME/.config/nvim/viml/commands.vim")
+vim.cmd("source "..vim.g.configdir.."/viml/commands.vim")

@@ -127,6 +127,7 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 
 Settings are located in `lua/options.lua`. By 'settings' I mean `vim.o.`, `vim.opt.` and `vim.g.` ones.
 
+- `g.configdir` is set to `$XDG_CONFIG_HOME/nvim` by default. Please, change it to your neovim config location.
 - `<leader>` is set to `;`
 - current line highlighting is enabled
 - tildas (`~`) at the end of buffer are disabled
@@ -270,14 +271,14 @@ Located in `viml/commands.vim`
 
 Execute file with plugin specification
 ```vim
-command! PackerSource :luaf ~/.config/nvim/lua/plugins.lua
+command! PackerSource :execute 'luaf ' . g:configdir . '/lua/plugins.lua'
 ```
 
 #### PackerConfig
 
 Open file with plugin specification
 ```vim
-command! PackerConfig :e ~/.config/nvim/lua/plugins.lua
+command! PackerConfig :execute 'edit ' . g:configdir . '/lua/plugins.lua'
 ```
 
 ### Autocommands
