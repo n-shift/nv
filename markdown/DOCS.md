@@ -178,6 +178,15 @@ Group for autocommands related to terminal
     ```vim
     au TermOpen term://* | setlocal nonumber norelativenumber
     ```
+#### hl\_yank augroup
+
+Group for highlighting on yank
+
+- TextYankPost
+    - Highlight content after yanking
+    ```vim
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=1000})
+    ```
 
 ## Mappings
 
