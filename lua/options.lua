@@ -9,6 +9,9 @@ g.configdir = "$XDG_CONFIG_HOME/nvim"
 -- set leader key to semicolon
 g.mapleader = ";"
 
+-- set system clipboard as default
+o.clipboard = "unnamedplus"
+
 -- enable current line highlighting
 opt.cursorline = true
 
