@@ -7,3 +7,8 @@ augroup termin
     au!
     au TermOpen term://* | setlocal nonumber norelativenumber
 augroup END
+
+augroup hl_yank
+    au!
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=1000})
+augroup END
