@@ -1,6 +1,22 @@
 local nest = prequire("nest")
-if not nest then
+local wk = prequire("which-key")
+if not nest and wk then
     return
+end
+
+-- register groups name via which-key and apply via nest
+local register_groups = function(maps)
+    for _, map in pairs(maps) do
+        if map.name or map.prefix then
+            wk.register({
+                [map.prefix] = {
+                    name = map.name,
+                },
+            })
+        end
+
+        nest.applyKeymaps(map)
+    end
 end
 
 local escapes = {
@@ -15,6 +31,7 @@ local leader = {
 }
 
 local packer = {
+    name = "packer",
     prefix = "<leader>p",
     { "i", "<cmd>PackerInstall<cr>" },
     { "S", "<cmd>PackerSource<cr>" },
@@ -28,6 +45,7 @@ local packer = {
 }
 
 local telescope = {
+    name = "telescope",
     prefix = "<leader>t",
     { "t", "<cmd>Telescope<cr>" },
     { "f", "<cmd>Telescope fd<cr>" },
@@ -39,6 +57,7 @@ local telescope = {
 }
 
 local n_gitsigns = {
+    name = "gitsigns",
     prefix = "<leader>h",
     { "s", "<cmd>lua require('gitsigns').stage_hunk()<cr>" },
     { "u", "<cmd>lua require('gitsigns').undo_stage_hunk()<cr>" },
@@ -51,13 +70,14 @@ local n_gitsigns = {
 }
 
 local v_gitsigns = {
+    name = "gitsigns",
     prefix = "<leader>h",
     mode = "v",
     { "s", "<cmd>lua require('gitsigns').stage_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
     { "r", "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v'))})<cr>" },
 }
 
-nest.applyKeymaps({
+register_groups({
     escapes,
     packer,
     leader,
@@ -66,5 +86,5 @@ nest.applyKeymaps({
     v_gitsigns,
 })
 
-nest.applyKeymaps({"<leader>m", "<cmd>split | terminal<cr>"})
-nest.applyKeymaps({"<leader>nf", "<cmd>DashboardNewFile<cr>"})
+nest.applyKeymaps({ "<leader>m", "<cmd>split | terminal<cr>" })
+nest.applyKeymaps({ "<leader>nf", "<cmd>DashboardNewFile<cr>" })

@@ -184,6 +184,17 @@ Group for autocommands related to terminal
 Located in `lua/mappings.lua`. Created using [nest.nvim](#lioncnestnvim).
 Default `<leader>` key is set in `lua/options.lua`
 
+### 'Documenting' keymap groups
+
+If you will use [which-key.nvim](#folkewhich-keynvim) - recommended way to register group of mappings with prefix is to use `register_groups()` function.
+```lua
+register_groups({
+    name = "group name", -- name that will be displayed in which-key
+    prefix = "some prefix",
+    -- everything below is done in same way as in nest.nvim
+})
+```
+
 ###### Please note that `<cmd>...<cr>` syntax is replaced in README with `:...`, `<cmd>lua require...` with `plugin_name...`
 
 - escapes (escape from specific mode to normal)
