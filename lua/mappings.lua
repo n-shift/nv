@@ -31,9 +31,11 @@ local telescope = {
     prefix = "<leader>t",
     { "t", "<cmd>Telescope<cr>" },
     { "f", "<cmd>Telescope fd<cr>" },
+    { "s", "<cmd>Telescope file_browser<cr>" },
     { "b", "<cmd>Telescope buffers<cr>" },
     { "g", "<cmd>Telescope live_grep<cr>" },
     { "h", "<cmd>Telescope command_history<cr>" },
+    { "r", "<cmd>Telescope oldfiles<cr>" },
 }
 
 local n_gitsigns = {
@@ -65,3 +67,4 @@ nest.applyKeymaps({
 })
 
 nest.applyKeymaps({"<leader>m", "<cmd>split | terminal<cr>"})
+nest.applyKeymaps({"<leader>nf", "<cmd>DashboardNewFile<cr>"})
