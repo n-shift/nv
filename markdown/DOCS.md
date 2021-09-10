@@ -6,6 +6,7 @@ Settings are located in `lua/options.lua`. By 'settings' I mean `vim.o.`, `vim.o
 
 - `g.configdir` is set to `$XDG_CONFIG_HOME/nvim` by default. Please, change it to your neovim config location.
 - `<leader>` is set to `;`
+- System clipboard is default clipboard
 - current line highlighting is enabled
 - tildas (`~`) at the end of buffer are disabled
 - maximum amount of completion items is 10
