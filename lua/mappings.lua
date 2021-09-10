@@ -4,8 +4,8 @@ if not nest then
 end
 
 local escapes = {
-    { mode = "i", { "jk", "" } },
-    { mode = "t", { "jk", "" } },
+    { mode = "i", { "jk", "<Esc>" } },
+    { mode = "t", { "jk", "<C-\\><C-N>" } },
 }
 
 local leader = {
