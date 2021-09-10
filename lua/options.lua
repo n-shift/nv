@@ -9,7 +9,7 @@ g.configdir = "$XDG_CONFIG_HOME/nvim"
 g.mapleader = ";"
 
 -- set system clipboard as default
-opt.clipboard = "unnamedplus"
+opt.clipboard:append("unnamedplus")
 
 -- enable current line highlighting
 opt.cursorline = true
