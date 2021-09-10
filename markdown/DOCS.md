@@ -204,9 +204,11 @@ Default `<leader>` key is set in `lua/options.lua`
     - prefix for all mappings here - `<leader>t`
     - `t` -> `:Telescope` - open telescope
     - `f` -> `:Telescope fd` - open telescope's file finder
+    - `s` -> `:Telescope file_browser` - open file browser
     - `b` -> `:Telescope buffers` - open telescope's buffer list
     - `g` -> `:Telescope live_grep` - grep through cwd files
     - `h` -> `:Telescope command_history` - open command history
+    - `r` -> `:Telescope find_files` - view recent files
 - gitsigns
     - prefix for all mappings here - `<leader>h`
     - normal mode
@@ -222,6 +224,7 @@ Default `<leader>` key is set in `lua/options.lua`
         - `r` -> `gitsigns.reset_hunk(.....)`
 - unnamed mappings
     - `<leader>m` -> `:split | terminal` - open terminal in horizontal split
+    - `<leader>nf` -> `:DashboardNewFile` - create new file with dashboard
 
 ## LSP
 
