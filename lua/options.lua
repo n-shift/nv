@@ -1,7 +1,6 @@
 -- shortcuts
-local g = vim.g
-local opt = vim.opt
-local o = vim.o
+local g = vim.g -- global variables
+local opt = vim.opt -- editor options
 
 -- set config path
 g.configdir = "$XDG_CONFIG_HOME/nvim"
@@ -10,7 +9,7 @@ g.configdir = "$XDG_CONFIG_HOME/nvim"
 g.mapleader = ";"
 
 -- set system clipboard as default
-o.clipboard = "unnamedplus"
+opt.clipboard = "unnamedplus"
 
 -- enable current line highlighting
 opt.cursorline = true
@@ -50,7 +49,7 @@ opt.shiftwidth = 4
 opt.shortmess:append("sI")
 
 -- enable terminal colors
-o.termguicolors = true
+opt.termguicolors = true
 
 -- disable shada
 opt.shadafile = "NONE"
