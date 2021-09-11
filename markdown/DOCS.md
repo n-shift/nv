@@ -130,6 +130,7 @@ Neovim snippet engine built in lua
 Native neovim lsp configurator
 - config is located in `lua/lsp.lua`
 - after plugin is loaded current file is reopened
+- marked as optional plugin
 
 #### [glepnir/lspsaga.nvim](https://github.com/glepnir/lspsaga)
 UI for neovim lsp

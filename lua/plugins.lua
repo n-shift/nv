@@ -48,7 +48,7 @@ packer.startup(function(use)
     use {
         'vhyrro/neorg',
         config = function() require('config.neorg') end,
-        after = "Catppuccino.nvim",
+        after = "nvim-treesitter",
     }
 
     -- TPOPE SECTION
@@ -140,6 +140,7 @@ packer.startup(function(use)
                 vim.cmd("silent! e%")
             end, 0)
         end,
+        opt = true,
     }
 
     -- great ui for lsp
