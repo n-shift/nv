@@ -32,7 +32,6 @@ nv is a lua neovim config which tries to be simple, cute and well-documented
 
 #### Requirements for default config to work
 - [Nerd patched font](https://www.nerdfonts.com/) - used by nvim-web-devicons
-- [glow](https://github.com/charmbracelet/glow) - used by [glow.nvim](#ellisonleaoglownvim)
 - [sumneko-lua](https://github.com/sumneko/lua-language-server) - used by [lua-dev](#folkelua-devnvim)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - default [telescope](#nvim-telescopetelescopenvim) grep searcher
 
@@ -96,7 +95,7 @@ State|nv|NvChad|kyoto.nvim|Lunarvim|
 Number of plugins | 18 | 33 | 30 | 26|
 Why | simplicity and well-documented | fast and pretty | fast and customizable | sane defaults|
 Installation | crossplatform | crossplatform | linux/macos only | [not yet](https://github.com/LunarVim/LunarVim/pull/1261)
-Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
+Required | nerd font, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags, python, nodejs, rg | rust, python, nodejs |
 > Latest update of table: 8.09.21
 
 ## Screenshots
@@ -105,8 +104,6 @@ Required | nerd font, glow, sumneko-lua, rg | rg, nodejs, nerd font | nerd font,
 [![overview](https://i.postimg.cc/C5GLb8RG/image.png)](https://postimg.cc/jnjbbLQ2)
 #### dashboard
 [![dashboard](https://i.postimg.cc/jSzB6r4r/image.png)](https://postimg.cc/yD8fBtGf)
-#### glow in action
-[![glow in action](https://i.postimg.cc/ZqxMTf0N/image.png)](https://postimg.cc/Tyh90JV2)
 #### nvimtree
 [![NvimTree](https://i.postimg.cc/gcVYSv0R/image.png)](https://postimg.cc/kD53DRKX)
 #### completion

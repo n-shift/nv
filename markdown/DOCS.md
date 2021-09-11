@@ -62,10 +62,6 @@ Plugin for formatting current buffer
 - loads on `:Format` command
 - config is located in `lua/config/formatter.lua`
 
-#### [ellisonleao/glow.nvim](https://github.com/ellisonleao/glow.nvim)
-Markdown preview, uses [glow](https://github.com/charmbracelet/glow) under hood
-- loads if current buffer has `markdown` filetype
-
 ### Tpope section
 
 #### [tpope/vim-surround](https://github.com/tpope/vim-surround)

@@ -45,12 +45,6 @@ packer.startup(function(use)
         cmd = 'Format',
     }
 
-    -- simple markdown preview
-    use {
-        'ellisonleao/glow.nvim',
-        ft = { 'markdown', },
-    }
-
     -- TPOPE SECTION
 
     -- quickly deal with pairs of ...
