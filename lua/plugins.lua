@@ -135,15 +135,12 @@ packer.startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         after = 'cmp-nvim-lsp',
-        setup = function()
-            vim.defer_fn(function()
-                packer.loader('lspconfig')
-            end, 0)
+        config = function()
+            require('lsp')
             vim.defer_fn(function()
                 vim.cmd("silent! e%")
             end, 0)
         end,
-        config = function() require('lsp') end,
     }
 
     -- great ui for lsp

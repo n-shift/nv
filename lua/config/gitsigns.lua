@@ -13,5 +13,7 @@ gitsigns.setup({
     },
     keymaps = {},
     current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
-    use_internal_diff = false, -- If vim.diff or luajit is present
+    diff_opts = {
+        internal = false,
+    }
 })
