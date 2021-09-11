@@ -21,8 +21,6 @@ Check out this [great neovim lua guide](https://github.com/nanotee/nvim-lua-guid
 # Recommended plugins
 - [williamboman/nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
     Crossplatform lsp servers installation
-- [vhyrro/neorg](https://github.com/vhyrro/neorg)
-    Powerful note-taking plugin
 - [AcksID/nvim-neoclip.lua](https://github.com/AcksID/nvim-neoclip.lua)
     Telescope cliboard manager
 - [lukas-reineke/indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
