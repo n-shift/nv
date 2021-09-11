@@ -69,7 +69,7 @@ nv is a lua neovim config which tries to be simple, cute and well-documented
 ## Configuration
 
 Feel free to configurate everything!
-Unlike [NvChad](https://github.com/NvChad/NvChad) and [kyoto.nvim](https://github.com/samrath2007/kyoto.nvim) nv provdes only glue for your config.
+Unlike [NvChad](https://github.com/NvChad/NvChad) and [kyoto.nvim](https://github.com/samrath2007/kyoto.nvim) nv provides only glue for your config.
 Make it yourself!
 
 Please, review every config file. If you don't know what exactly this option does - run `:h $option` or if it's in plugin config - visit it's README.md.
