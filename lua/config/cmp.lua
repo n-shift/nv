@@ -39,6 +39,7 @@ cmp.setup({
         { name = "nvim_lua" },
         { name = "path" },
         { name = "luasnip" },
+        { name = "neorg" },
     },
     mapping = {
         ["<cr>"] = cmp.mapping.confirm(),
@@ -54,6 +55,7 @@ cmp.setup({
                 nvim_lua = "[Nvim]",
                 path = "[Path]",
                 luasnip = "[Snippet]",
+                neorg = "[Neorg]",
             })[entry.source.name]
 
             return item
