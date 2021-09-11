@@ -3,6 +3,8 @@ if not cmp then
     return
 end
 
+local luasnip = prequire("luasnip")
+if not luasnip then return end
 local lsp_symbols = {
     Text = "   (Text) ",
     Method = "   (Method)",
@@ -32,7 +34,6 @@ local lsp_symbols = {
 }
 
 cmp.setup({
-    confirmation = { default_behaviour = cmp.ConfirmBehavior.Replace },
     sources = {
         { name = "buffer" },
         { name = "nvim_lsp" },
@@ -42,7 +43,7 @@ cmp.setup({
         { name = "neorg" },
     },
     mapping = {
-        ["<cr>"] = cmp.mapping.confirm(),
+        ["<cr>"] = cmp.mapping.confirm({select = true}),
         ["<s-tab>"] = cmp.mapping.select_prev_item(),
         ["<tab>"] = cmp.mapping.select_next_item(),
     },
@@ -63,10 +64,6 @@ cmp.setup({
     },
     snippet = {
         expand = function(args)
-            local luasnip = prequire("luasnip")
-            if not luasnip then
-                return
-            end
             luasnip.lsp_expand(args.body)
         end,
     },
