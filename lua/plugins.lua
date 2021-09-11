@@ -1,7 +1,7 @@
 -- load packer
 local packer = prequire("config.packer")
 
-if not packer then 
+if not packer then
     return
 end
 
@@ -35,7 +35,7 @@ packer.startup(function(use)
         },
         config = function() require('config.statusline') end,
     }
-    
+
     -- TEXT
 
     -- text formatter
@@ -45,13 +45,19 @@ packer.startup(function(use)
         cmd = 'Format',
     }
 
+    use {
+        'vhyrro/neorg',
+        config = function() require('config.neorg') end,
+        after = "Catppuccino.nvim",
+    }
+
     -- TPOPE SECTION
 
     -- quickly deal with pairs of ...
     use {
         'tpope/vim-surround',
         event = 'BufEnter',
-    }	
+    }
 
     -- UTILS
 
@@ -71,13 +77,13 @@ packer.startup(function(use)
         cmd = "Telescope",
         config = function() require('config.telescope') end,
     }
-    
+
     -- dashboard on VimEnter
     use {
         'glepnir/dashboard-nvim',
         config = function() require('config.dashboard') end,
     }
-    
+
     -- file manager
     use {
         'kyazdani42/nvim-tree.lua',
@@ -143,7 +149,7 @@ packer.startup(function(use)
         after = 'nvim-lspconfig',
         config = function() require('config.lspsaga') end,
     }
-    
+
     -- lua lsp defaults
     use {
         'folke/lua-dev.nvim',
