@@ -62,7 +62,7 @@ Plugin for formatting current buffer
 - loads on `:Format` command
 - config is located in `lua/config/formatter.lua`
 
-#### [vhyrro/neorg](https://github.com/vhyrro/neorg)
+#### [nvim-neorg/neorg](https://github.com/nvim-neorg/neorg)
 Powerful note-taking plugin
 - loads after [nvim-treesitter](#nvim-treesitternvim-treesitter)
 - config is located in `lua/config/neorg.lua`

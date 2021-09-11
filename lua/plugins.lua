@@ -46,7 +46,7 @@ packer.startup(function(use)
     }
 
     use {
-        'vhyrro/neorg',
+        'nvim-neorg/neorg',
         config = function() require('config.neorg') end,
         after = "nvim-treesitter",
     }
