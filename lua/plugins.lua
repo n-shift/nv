@@ -134,7 +134,6 @@ packer.startup(function(use)
     -- lsp configuration
     use {
         'neovim/nvim-lspconfig',
-        after = 'cmp-nvim-lsp',
         config = function()
             require('lsp')
             vim.defer_fn(function()

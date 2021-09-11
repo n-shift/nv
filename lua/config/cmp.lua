@@ -1,4 +1,4 @@
---[[local cmp = prequire("cmp")
+local cmp = prequire("cmp")
 if not cmp then
     return
 end
@@ -69,4 +69,4 @@ cmp.setup({
         end,
     },
 })
-]]
+
