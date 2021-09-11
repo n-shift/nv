@@ -140,7 +140,7 @@ packer.startup(function(use)
                 vim.cmd("silent! e%")
             end, 0)
         end,
-        opt = true,
+        after = 'cmp-nvim-lsp',
     }
 
     -- great ui for lsp
