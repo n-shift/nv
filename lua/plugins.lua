@@ -22,7 +22,6 @@ packer.startup(function(use)
     -- better text highlighting
     use {
         'nvim-treesitter/nvim-treesitter',
-        event = 'BufRead',
         config = function() require('config.treesitter') end,
         run = ':TSUpdate',
     }
