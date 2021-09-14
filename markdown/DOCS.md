@@ -117,8 +117,6 @@ Completion engine based on "sources" concept
 - requires
     - [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
         - loads after `nvim-cmp` plugin
-    - [hrsh7th/cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
-        - loads after `nvim-cmp` plugin
     - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
         - loads after `nvim-cmp` plugin
     - [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
