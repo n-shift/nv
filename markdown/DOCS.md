@@ -46,7 +46,6 @@ Pack of treesitter-compatible colorschemes with multiple other plugin integratio
 
 #### [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 Built-in language parser's configurator
-- loads when starting to edit a new buffer (`BufRead` event)
 - config is located in `lua/config/treesitter.lua`
 
 #### [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim)
