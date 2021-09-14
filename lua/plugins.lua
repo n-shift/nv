@@ -112,7 +112,6 @@ packer.startup(function(use)
     -- completion engine
     use {
         'hrsh7th/nvim-cmp',
-        event = "BufRead",
         requires = {
             { 'hrsh7th/cmp-buffer', after = 'nvim-cmp', },
             { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp', },
@@ -124,7 +123,6 @@ packer.startup(function(use)
     -- snippets
     use {
         'L3MON4D3/LuaSnip',
-        after = 'nvim-cmp',
     }
 
     -- LSP

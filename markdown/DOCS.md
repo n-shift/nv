@@ -112,7 +112,6 @@ Super fast git decorations implemented purely in lua/teal
 
 #### [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 Completion engine based on "sources" concept
-- loads when starting to edit a new buffer (`BufRead` event)
 - requires
     - [hrsh7th/cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
         - loads after `nvim-cmp` plugin
@@ -124,7 +123,6 @@ Completion engine based on "sources" concept
 
 #### [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 Neovim snippet engine built in lua
-- loads after `nvim-cmp` plugin
 
 ### LSP
 
