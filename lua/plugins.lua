@@ -149,7 +149,6 @@ packer.startup(function(use)
     -- lua lsp defaults
     use {
         'folke/lua-dev.nvim',
-        ft = {'lua'},
     }
 
 end

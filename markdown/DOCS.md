@@ -139,7 +139,6 @@ UI for neovim lsp
 
 #### [folke/lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 Dev setup for init.lua and plugin development with full signature help, docs and completion for nvim lua API.
-- loads if current buffer has `lua` type
 
 ## (Auto)commands
 
