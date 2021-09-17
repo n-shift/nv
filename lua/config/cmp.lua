@@ -37,7 +37,6 @@ cmp.setup({
     sources = {
         { name = "buffer" },
         { name = "nvim_lsp" },
-        { name = "path" },
         { name = "luasnip" },
         { name = "neorg" },
     },
@@ -52,7 +51,6 @@ cmp.setup({
             item.menu = ({
                 buffer = "[Buffer]",
                 nvim_lsp = "[LSP]",
-                path = "[Path]",
                 luasnip = "[Snippet]",
                 neorg = "[Neorg]",
             })[entry.source.name]
