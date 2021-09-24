@@ -20,6 +20,9 @@ opt.fillchars = { eob = " " }
 -- set maximum amount of completion items to 10
 opt.pumheight = 10
 
+-- complete even if there's only one item; do not autoselect item
+opt.completeopt = 'menuone,noselect'
+
 -- set minimal number of screeen lines abow and below cursor
 opt.scrolloff = 1000
 

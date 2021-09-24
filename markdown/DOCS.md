@@ -10,6 +10,7 @@ Settings are located in `lua/options.lua`. By 'settings' I mean `vim.o.`, `vim.o
 - current line highlighting is enabled
 - tildas (`~`) at the end of buffer are disabled
 - maximum amount of completion items is 10
+- complete even if there's only one item; do not autoselect item
 - minimal number of lines abow and below cursor is 1000, so cursor is almost always ar center
 - splits open to down and right
 - other lanugage providers are disabled
