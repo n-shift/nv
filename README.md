@@ -101,17 +101,17 @@ Required | nerd font, sumneko-lua, rg | rg, nodejs, nerd font | nerd font, ctags
 ## Screenshots
 
 #### overview
-[![overview](https://i.postimg.cc/C5GLb8RG/image.png)](https://postimg.cc/jnjbbLQ2)
+[![overview](https://i.postimg.cc/T2ryHJMD/image.png)](https://postimg.cc/8szP7WCp)
 #### dashboard
-[![dashboard](https://i.postimg.cc/jSzB6r4r/image.png)](https://postimg.cc/yD8fBtGf)
+[![dashboard](https://i.postimg.cc/Ls14gmm1/image.png)](https://postimg.cc/94cHv5Rm)
 #### nvimtree
-[![NvimTree](https://i.postimg.cc/gcVYSv0R/image.png)](https://postimg.cc/kD53DRKX)
+[![NvimTree](https://i.postimg.cc/pTBHKT4p/image.png)](https://postimg.cc/YGjZHppH)
 #### completion
-[![completion](https://i.postimg.cc/N0cD4qCR/image.png)](https://postimg.cc/sMT5j8r2)
+[![completion](https://i.postimg.cc/85ZY1rxB/image.png)](https://postimg.cc/tZVkk7qY)
 #### telescope.nvim
-[![telescope.nvim](https://i.postimg.cc/jSs8MHMd/image.png)](https://postimg.cc/MvFbTQkh)
+[![telescope.nvim](https://i.postimg.cc/43Z2V5gQ/image.png)](https://postimg.cc/nXR1tqMX)
 #### lualine
-[![lualine](https://i.postimg.cc/8cRHHcW6/image.png)](https://postimg.cc/5QtL9xs4)
+[![lualine](https://i.postimg.cc/YjKzkr2z/image.png)](https://postimg.cc/D46XPKXS)
 
 # nv resources
 - [EXTENDING.md](https://github.com/shift-d/nv/blob/main/markdown/EXTENDING.md) - notes about extending nv
