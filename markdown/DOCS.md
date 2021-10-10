@@ -40,9 +40,8 @@ List below contains every plugin provided by default with notes about it's confi
 
 ### Colors
 
-#### [Pocco81/Catppuccino.nvim](https://github.com/Pocco81/Catppuccino.nvim)
-Pack of treesitter-compatible colorschemes with multiple other plugin integrations available
-- loads after reading `init.lua` (`VimEnter` event)
+#### [shift-d/pure](https://github.com/shift-d/pure)
+TreeSitter-compatible colorscheme focused on simplicity
 - config is located in `lua/config/colorscheme.lua`
 
 #### [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -91,7 +90,7 @@ Lua dashboard that you see after open neovim.
 
 #### [kyazdani42/nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 A file explorer tree written in lua
-- loads after [Catppuccino.nvim](#pocco81catppuccinonvim)
+- loads after [pure](#shiftdpure)
 - requires
     - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - config is located in `lua/config/nvimtree.lua`

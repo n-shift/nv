@@ -14,8 +14,7 @@ packer.startup(function(use)
 
     -- bunch of colorschemes with treesitter support
     use {
-        'Pocco81/Catppuccino.nvim',
-        event = 'VimEnter',
+        '~/.code/lua/pure/',
         config = function() require('config.colorscheme') end,
     }
 
@@ -88,7 +87,7 @@ packer.startup(function(use)
         'kyazdani42/nvim-tree.lua',
         config = function() require('config.nvimtree') end,
         requires = 'kyazdani42/nvim-web-devicons',
-        after = 'Catppuccino.nvim',
+        after = 'pure',
     }
 
     -- keybinding suggestions
